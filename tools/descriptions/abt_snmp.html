@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PING DESCRIPTION</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="assets/css/form-elements.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- Custom CSS -->
+    <link href="assets/css/sb-admin.css" rel="stylesheet">
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+</head>
+
+<body>
+    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top"><h4><strong>Networking Tools</strong></h4></a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="ping.html"><h4><strong>Ping Tool</strong></h4></a>
+                    </li>
+                    <li>
+                        <a href="/main page/index.html"><h4><strong>Home</strong></h4></a>
+                    </li>
+                </ul>
+                <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container-fluid -->
+        </div>
+    </nav>
+
+    <!-- Top content -->
+    <div class="top-content">
+
+        <div class="inner-bg">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-8 col-sm-offset-2 text">
+
+                        <h1><strong>PING DESCRIPTION</strong></h1>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12 form-box">
+                        <div class="form-top">
+                            <br>
+                            <p1>PING (Packet INternet Groper) tool is the best way to test connectivity between two nodes. Packet
+                                loss is a common problem in the IP networks. Ping, although simple, is an excellent tool
+                                in order to troubleshoot packet loss issues. The success or failure of this very simple operation
+                                can provide some insight into the state of a network or a series of networks.
+                                <br> Ping uses the ICMP protocol's mandatory ECHO_REQUEST datagram to elicit an ICMP ECHO_RESPONSE
+                                from a host or gateway. ECHO_REQUEST datagrams (''pings'') have an IP and ICMP header, followed
+                                by a struct timeval and then an arbitrary number of ''pad'' bytes used to fill out the packet.
+                                In most cases, the ICMP echo-request packets and echo-reply packets, upon which ping's functionality
+                                relies, are allowed through routers and firewalls, however with the advent of trojans and
+                                distributed denial of service tools which transmit information within ICMP packets, some
+                                networks and network administrators block ICMP at their borders. As a result of these nefarious
+                                uses of echo-request and echo-reply packets, some cautious network administrators block all
+                                non-essential ICMP at their border routers. Thus, we can no longer assume that simply because
+                                a host is not answering our ping request, this host is down. There may be a device which
+                                has been configured to filter out this traffic.
+                                <br> If a host is reachable and answering our echo-requests, then we may also wish to believe
+                                that the round-trip times recorded by ping are an accurate representation of network conditions.
+                                This can be misleading. Some routers are configured to give ICMP diagnostic messages the
+                                lowest priority of any IP packets travelling through them, in which case that router may
+                                contribute significantly to the round trip time of any echo-request packet passing through
+                                it.
+                                <br>
+                                <br>
+                                <br> OPTIONS:
+                                <br>
+                                <br> -a Audible ping.
+                                <br>
+                                <br> -A Adaptive ping. Interpacket interval adapts to round-trip time, so that effectively not
+                                more than one (or more, if preload is set) unanswered probes present in the network. Minimal
+                                interval is 200msec for not super-user. On networks with low rtt this mode is essentially
+                                equivalent to flood mode.
+                                <br>
+                                <br> -b Allow pinging a broadcast address.
+                                <br>
+                                <br> -B Do not allow ping to change source address of probes. The address is bound to one selected
+                                when ping starts.
+                                <br>
+                                <br> -c count
+                                <br> Stop after sending count ECHO_REQUEST packets. With deadline option, ping waits for count
+                                ECHO_REPLY packets, until the timeout expires.
+                                <br>
+                                <br> -d Set the SO_DEBUG option on the socket being used. Essentially, this socket option is
+                                not used by Linux kernel.
+                                <br>
+                                <br> -F flow label
+                                <br> Allocate and set 20 bit flow label on echo request packets. (Only ping6). If value is zero,
+                                kernel allocates random flow label.
+                                <br>
+                                <br> -f Flood ping
+                                <br> For every ECHO_REQUEST sent a period ''.'' is printed, while for every ECHO_REPLY received
+                                a backspace is printed. This provides a rapid display of how many packets are being dropped.
+                                If interval is not given, it sets interval to zero and outputs packets as fast as they come
+                                back or one hundred times per second, whichever is more. Only the super-user may use this
+                                option with zero interval.
+                                <br>
+                                <br> -i interval
+                                <br> Wait interval seconds between sending each packet. The default is to wait for one second
+                                between each packet normally, or not to wait in flood mode. Only super-user may set interval
+                                to values less 0.2 seconds.
+                                <br>
+                                <br> -I interface address
+                                <br> Set source address to specified interface address. Argument may be numeric IP address or
+                                name of device. When pinging IPv6 link-local address this option is required.
+                                <br>
+                                <br> -l preload
+                                <br> If preload is specified, ping sends that many packets not waiting for reply. Only the super-user
+                                may select preload more than 3.
+                                <br>
+                                <br> -L Suppress loopback of multicast packets. This flag only applies if the ping destination
+                                is a multicast address.
+                                <br>
+                                <br> -n Numeric output only. No attempt will be made to lookup symbolic names for host addresses.
+                                <br>
+                                <br> -p pattern
+                                <br> You may specify up to 16 ''pad'' bytes to fill out the packet you send. This is useful for
+                                diagnosing data-dependent problems in a network. For example, -p ff will cause the sent packet
+                                to be filled with all ones.
+                                <br>
+                                <br> -Q tos
+                                <br> Set Quality of Service -related bits in ICMP datagrams. tos can be either decimal or hex
+                                number. Traditionally (RFC1349), these have been interpreted as: 0 for reserved (currently
+                                being redefined as congestion control), 1-4 for Type of Service and 5-7 for Precedence. Possible
+                                settings for Type of Service are: minimal cost: 0x02, reliability: 0x04, throughput: 0x08,
+                                low delay: 0x10. Multiple TOS bits should not be set simultaneously. Possible settings for
+                                special Precedence range from priority (0x20) to net control (0xe0). You must be root (CAP_NET_ADMIN
+                                capability) to use Critical or higher precedence value. You cannot set bit 0x01 (reserved)
+                                unless ECN has been enabled in the kernel. In RFC2474, these fields has been redefined as
+                                8-bit Differentiated Services (DS), consisting of: bits 0-1 of separate data (ECN will be
+                                used, here), and bits 2-7 of Differentiated Services Codepoint (DSCP).
+                                <br>
+                                <br> -q Quiet output. Nothing is displayed except the summary lines at startup time and when
+                                finished.
+                                <br>
+                                <br> -R Record route. Includes the RECORD_ROUTE option in the ECHO_REQUEST packet and displays
+                                the route buffer on returned packets. Note that the IP header is only large enough for nine
+                                such routes. Many hosts ignore or discard this option.
+                                <br>
+                                <br> -r Bypass the normal routing tables and send directly to a host on an attached interface.
+                                If the host is not on a directly-attached network, an error is returned. This option can
+                                be used to ping a local host through an interface that has no route through it provided the
+                                option -I is also used.
+                                <br>
+                                <br> -s packetsize
+                                <br> Specifies the number of data bytes to be sent. The default is 56, which translates into
+                                64 ICMP data bytes when combined with the 8 bytes of ICMP header data.
+                                <br>
+                                <br> -S sndbuf
+                                <br> Set socket sndbuf. If not specified, it is selected to buffer not more than one packet.
+                                <br>
+                                <br> -t ttl Set the IP Time to Live.
+                                <br>
+                                <br> -T timestamp option
+                                <br> Set special IP timestamp options. timestamp option may be either tsonly (only timestamps),
+                                tsandaddr (timestamps and addresses) or tsprespec host1 [host2 [host3 [host4]]] (timestamp
+                                prespecified hops).
+                                <br>
+                                <br> -M hint
+                                <br> Select Path MTU Discovery strategy. hint may be either do (prohibit fragmentation, even
+                                local one), want (do PMTU discovery, fragment locally when packet size is large), or dont
+                                (do not set DF flag).
+                                <br>
+                                <br> -U Print full user-to-user latency (the old behaviour). Normally ping prints network round
+                                trip time, which can be different f.e. due to DNS failures.
+                                <br>
+                                <br> -v Verbose output.
+                                <br>
+                                <br> -V Show version and exit.
+                                <br>
+                                <br> -w deadline
+                                <br> Specify a timeout, in seconds, before ping exits regardless of how many packets have been
+                                sent or received. In this case ping does not stop after count packet are sent, it waits either
+                                for deadline expire or until count probes are answered or for some error notification from
+                                network.
+                                <br>
+                                <br> -W timeout
+                                <br> Time to wait for a response, in seconds. The option affects only timeout in absence of any
+                                responses, otherwise ping waits for two RTTs.
+                                <br>
+                                <br>
+                                <br>
+                                <br> Ways to troubleshoot a network
+                                <br> 1.Using ping to test reachability
+                                <br> In its simplest form, ping is used to test reachability of a remote host i.e. it can be
+                                used to find out whether the peer host/gateway is reachable. $ ping google.com
+                                <br> PING google.com (74.125.200.102) 56(84) bytes of data.
+                                <br> 64 bytes from plus.google.com (74.125.200.102): icmp_req=1 ttl=128 time=172 ms
+                                <br> 64 bytes from plus.google.com (74.125.200.102): icmp_req=2 ttl=128 time=164 ms
+                                <br> 64 bytes from plus.google.com (74.125.200.102): icmp_req=4 ttl=128 time=165 ms
+                                <br> --- google.com ping statistics ---
+                                <br> 4 packets transmitted, 3 received, 25% packet loss, time 3013ms
+                                <br> rtt min/avg/max/mdev = 164.618/167.289/172.010/3.364 ms
+                                <br>
+                                <br> The responses essentially tell you how long it took the specified machine to respond with
+                                56 bytes of data. At the end of the run, ping summarizes the number of replies, and performs
+                                some calculations on the round-trip times. As with much data collection, you need a large
+                                sample set of data to draw conclusions about your network.
+                                <br>
+                                <br> Typically, when you issue the ping command, one of following things will happen, each of
+                                which has its own meaning:
+                                <br> The first thing that can happen is that the specified machine will produce four replies.
+                                This indicates that the workstation is able to communicate with the specified host at the
+                                TCP/IP level. The second thing that can happen is that all four requests time out. If you
+                                look at Figure A, you will notice that each response ends in TTL=128. TTL stands for "time
+                                to live." What this means is that each of the four queries and responses must be completed
+                                within 128 milliseconds. The TTL is also decremented once for each hop on the way back.
+                                <br> At any rate, if all four requests have timed out, it means that the TTL expired before the
+                                reply was received. This can mean one of three things: Communication problems are preventing
+                                packets from flowing between the two machines: This could be caused by a disconnected cable,
+                                a bad routing table, or a number of other issues. Communications are occurring, but are too
+                                slow for ping to acknowledge: This can be caused by extreme network congestion, or by faulty
+                                network hardware or wiring. Communications are functional, but a firewall is blocking ICMP
+                                traffic: Ping will not work unless the destination machine's firewall (and any firewalls
+                                between the two machines) allow ICMP echoes. A third thing that can happen when you enter
+                                the ping command is that some replies are received, while others time out. This can point
+                                to bad network cabling, faulty hardware, or extreme network congestion.
+                                <br>
+                                <br>
+                                <br>
+                                <br> 2. Using ping to stress a network
+                                <br> Occasionally, you'll want to stress the network to test how many packets you can squeeze
+                                through a link, and how gracefully performance on that link degrades. Fortunately, ping,
+                                when run with the -f switch can perform exactly this kind of test for you.
+                                <br> [root@morgan]# ping -c 400 -f -n 192.168.99.254
+                                <br> PING 192.168.99.254 (192.168.99.254) from 192.168.98.82 : 56(84) bytes of data.
+                                <br> ............
+                                <br> --- 192.168.99.254 ping statistics ---
+                                <br> 411 packets transmitted, 400 packets received, 2% packet loss
+                                <br> round-trip min/avg/max/mdev = 37.840/62.234/97.807/12.946 ms
+                                <br>
+                                <br>
+                                <br> In this example, we have used the default packet size and sent 411 packets, receiving only
+                                400 back from the remote host for a mere 2% packet loss. By increasing the packet size of
+                                the packet we are sending across the link we can get a sense for how quickly performance
+                                degrades on this link. If we use a much larger packet size (still smaller than Ethernet's
+                                1500 byte frame), we see even more packet loss. We can specify a packet size of 512 bytes
+                                with the -s option.
+                                <br>
+                                <br>
+                                <br>
+                                <br> 3. Recording a network route with ping
+                                <br> Ping is even nice enough to report to us that a subsequent journey took the same route as
+                                the first packet. If you have a statically routed internal network, any subsequent packets
+                                should look exactly like the second packet. If dynamic routing is in use on your internal
+                                network, you may find that the routes change occasionally.
+                                <br> As always, ping summarizes the output after it has completed its run, but let’s examine
+                                the new section. By using the record route option, we are asking all routers along the way
+                                to include their IPs in the header. Although some routers may not observe this courtesy,
+                                many do. Unfortunately, there is only room to record 8 different hops, so the use of ping
+                                -R is mostly useful only in smaller networks. Ping with the record route option (-R) doesn't
+                                convey the information in as visually an appealing way, but it can get the job done.
+                                <br>
+                                <br>
+                                <br>
+                                <br> 4. Setting ToS for a diagnostic ping
+                                <br> Type of Service (ToS) is increasingly in use on backbones across the Internet which has
+                                brought with it Service Level Agreements (SLA). If you have an SLA with your provider, you
+                                may find the use of ping-Q to set the IP packet ToS flags will help you to determine if your
+                                provider is holding up their end of the bargain.
+                                <br>
+                                <br>
+                                <br>
+                                <br> 5. Specifying a source address for ping
+                                <br> Occasionally, you'll find yourself on a heavily packet filtered host, or a host which employs
+                                conditional routing for packets with certain source addresses. Such packet filtering can
+                                prevent or conflict with the use of ping. Fortunately, ping allows the user to specify the
+                                source address of an outbound packet, thus allowing traversal of packet filters and conditional
+                                routing tables. As you can see, ping is a versatile tool in the network administrator's toolkit,
+                                and can be used for a wide range of tests beyond the simple reachability test.
+                            </p1>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- Javascript -->
+    <script src="assets/js/jquery-1.11.1.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/jquery.backstretch.min.js"></script>
+    <script src="assets/js/scripts.js"></script>
+
+    <!--[if lt IE 10]>
+            <script src="assets/js/placeholder.js"></script>
+        <![endif]-->
+
+</body>
+
+</html>

@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<style>
+        body {
+ background-image: url("1.jpg");
+    }
+    </style>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>LATENCY DESCRIPTION</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
+    <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/font-awesome/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="../assets/css/form-elements.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+
+    <!-- Custom CSS -->
+    <link href="../assets/css/sb-admin.css" rel="stylesheet">
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+</head>
+
+<body>
+    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top"><h4><strong>Networking Tools</strong></h4></a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="../latency.html"><h4><strong>Latency Tool</strong></h4></a>
+                    </li>
+                    <li>
+                        <a href="/main page/index.html"><h4><strong>Home</strong></h4></a>
+                    </li>
+                </ul>
+                <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container-fluid -->
+        </div>
+    </nav>
+
+    <!-- Top content -->
+    <div class="top-content">
+
+        <div class="inner-bg">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-8 col-sm-offset-2 text">
+                        <h1><strong>LATENCY DESCRIPTION</strong></h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12 form-box">
+                        <div class="form-top">
+                            <br>
+                            <p1>
+                                <br> Network latency is the term used to indicate any kind of delay that happens in data communication
+                                over a network. Network connections in which small delays occur are called low-latency networks
+                                whereas network connections which suffers from long delays are called high-latency networks.
+                                <br> Network latency can kill application performance. High latency creates bottlenecks in any
+                                network communication. It prevents the data from taking full advantage of the network pipe
+                                and effectively decreases the communication bandwidth. The impact of latency on network bandwidth
+                                can be temporary or persistent based on the source of the delays.
+                                <br> httping lets you measure the latency and throughput of a web server. Httping is like 'ping'
+                                but for http-requests. Giving a url, and it'll show you how long it takes to connect, send
+                                a request and retrieve the reply (only the headers). So it measures the latency of the web
+                                server + network.
+                                <br>
+                                <br>Possible contributors to network latency include:
+                                <br> Problems with the transmission medium itself.
+                                <br> Errors with the router or switches as each gateway takes time to examine and change the
+                                packet header.
+                                <br> Anti-virus and similar security processes by often requiring complete message reassembly
+                                and tear down before sending on.
+                                <br> The propagation time or the time it takes for a packet to physically travel from its source
+                                to a destination.
+                                <br> Storage delays when packets are subject to storage or disk access delays at intermediate
+                                devices like switches and bridges.
+                                <br> Software malfunctions at the user level can cause some delays from a user perspective.
+                                <br> With the help of this analysis, network administrators can re-route packets to minimize
+                                the network latency.
+                                <br>
+                                <br>
+                                <br>Options
+                                <br>
+                                <br> -g url
+                                <br> This selects the url to probe. E.g.: http://localhost/
+                                <br>
+                                <br> -h hostname
+                                <br> Instead of '-g' one can also set a hostname to probe with -h: -h localhost
+                                <br>
+                                <br> -p portnumber
+                                <br> -p can be used together with -h. -p selects the portnumber to probe.
+                                <br>
+                                <br> -x [proxyhost:port]
+                                <br> Probe using a proxyserver. Note that you're also measuring the latency of the proxyserver!
+                                <br>
+                                <br> -c count
+                                <br> How many probes to send before exiting.
+                                <br>
+                                <br> -i interval
+                                <br> How many seconds to sleep between every probe sent.
+                                <br>
+                                <br> -t timeout
+                                <br> How long to wait for answer from the other side.
+                                <br>
+                                <br> -S Split measured latency in time to connect and time to exchange a request with the HTTP
+                                server.
+                                <br>
+                                <br> -s When a successful transaction was done, show the HTTP statuscode (200, 404, etc.).
+                                <br>
+                                <br> -G Do a GET request instead of a HEAD request: this means that also the complete page/file
+                                must be transferred. Note that in this case you're no longer measuring the latency!
+                                <br>
+                                <br> -b Use this switch together with '-G'. When this option is used, the transferspeed (in KB/s)
+                                is shown.
+                                <br>
+                                <br> -B Use this switch together with '-G'. Ask the HTTP server to compress the returned data:
+                                this will reduce the influence of the bandwidth of your connection while increasing the influence
+                                of the processorpower of the HTTP server.
+                                <br>
+                                <br> -L x
+                                <br> Use this switch together with '-G'. Limit the amount of data transferred to 'x'. Note that
+                                this only affects the content of the page/file and not the headerdata.
+                                <br>
+                                <br> -X Use this switch together with '-G'. For each "ping" show the amount of data transferred
+                                (excluding the headers).
+                                <br>
+                                <br> -l Connect using SSL
+                                <br> For this to work you need to give a 'https'-url or a 443 portnumber.
+                                <br>
+                                <br> -z When connecting using SSL, display the fingerprint of the X509 certificate(s) of the
+                                peer.
+                                <br>
+                                <br> -a Audible ping
+                                <br>
+                                <br> -f Flood ping
+                                <br> Do not sit idle between each ping but ping as fast as the computer and network allow you
+                                to.
+                                <br>
+                                <br> -m Show machine readable output (also check '-o' and '-e')
+                                <br>
+                                <br> -o x,x,...
+                                <br> This selects the HTTP status-codes which are regarded as an OK-state (only with '-m')
+                                <br>
+                                <br> -e str
+                                <br> When the status-code differs from the ones selected with '-o', the given string is displayed
+                                <br>
+                                <br> -I str
+                                <br> UserAgent-string to send to the webserver (instead of 'HTTPing version')
+                                <br>
+                                <br> -R str
+                                <br> Referer-string to send to the webserver
+                                <br>
+                                <br> -r Only resolve the hostname once This takes the resolving out of the loop so that the latency
+                                of the DNS is not measured. Also usefull when you want to measure only 1 webserver while
+                                the DNS returns a different ip-address for each resolve ('roundrobin').
+                                <br>
+                                <br> -n warn, crit
+                                <br> Switches HTTPing to Nagios-plugin mode 1: return exitcode '1' when the average response
+                                time is bigger then 'warn', return exitcode '2' when the the average response time is bigger
+                                then 'crit'. In all other cases return exitcode '0'.
+                                <br>
+                                <br> -N x
+                                <br> Switches HTTPing to Nagios-plugin mode 2: return 0 when everything is fine, 'x' when anything
+                                fails. E.g.: 1 => Nagios warning state, 2 => Nagios critical state.
+                                <br>
+                                <br> -q Be quiet, only return an exit-code.
+                                <br>
+                                <br> -A, U, P
+                                <br> Activate the basic authentication, Username follow the -U, Password the -P.
+                                <br>
+                                <br> -T x Read the password from file 'x' (instead of entering it on the command line).
+                                <br>
+                                <br> -F Attempt TCP Fast Open while trying to connect to a server (for Linux, version 3.7 onwards
+                                of the kernel)
+                                <br>
+                                <br> -Y Enable colors
+                                <br>
+                                <br> --threshold-red x
+                                <br> If the measured threshold is higher than x (and -Y is given), then the shown value is colored
+                                red. If you also use --threshold-yellow, then this value must be bigger.
+                                <br>
+                                <br> --threshold-yellow x
+                                <br> If the measured threshold is higher than x (and -Y is given), then the shown value is colored
+                                yellow.
+                                <br>
+                                <br> --threshold-show x
+                                <br> If the measured threshold is higher than x, then the result is shown (default is show always).
+                                The value x is in ms.
+                                <br>
+                                <br> --timestamp or "--ts"
+                                <br> Put a timestamp before the result-lines. Use -v to also show a date.
+                                <br>
+                                <br> --no-host-header
+
+                                <br> Do not put a "Host:"-header in the request header.
+                                <br>
+                                <br> -5 The proxy server selected is a SOCKS5 server.
+                                <br>
+                                <br> -W Do not abort program if resolving fails.
+                                <br>
+                                <br> --socks5-user x
+                                <br> Use username 'x' to authenticate against socks5 server (optional).
+                                <br>
+                                <br> --socks5-password x
+                                <br> Use password 'x' to authenticate against socks5 server (optional).
+                                <br>
+                                <br> --aggregates x[,y[,z[,etc.]]]
+                                <br> Show aggregates every x[/y[/z[/etc]]] seconds.
+                                <br>
+                                <br> -v Increase verbosity mode. To show standard deviation and dates in output.
+                                <br>
+                                <br> -V Show the version and exit.
+                                <br>
+                                <br>
+                            </p1>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- Javascript -->
+    <script src="../assets/js/jquery-1.11.1.min.js"></script>
+    <script src="../assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../assets/js/jquery.backstretch.min.js"></script>
+    <script src="../assets/js/scripts.js"></script>
+
+    <!--[if lt IE 10]>
+            <script src="assets/js/placeholder.js"></script>
+        <![endif]-->
+
+</body>
+
+</html>

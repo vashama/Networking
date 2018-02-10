@@ -1,0 +1,107 @@
+<h1>"ifconfig" COMMAND- EXPLAINED IN DETAIL</h1> 
+<br>
+ifconfig is a command line tool used to configure a network interface in Linux.
+It can be used to set-up any/all the network interfaces such as Ethernet, wireless, modem and so on that are connected to your computer.
+<br>
+ifconfig command provides a wealth of knowledge to any person who takes the time to look at its output.
+Commonly, the ifconfig command is used for the following tasks:
+<br>
+CONFIGURING AN INTERFACE:
+<br>
+You can configure an Ethernet card, wireless card, loop back interface or any other network interface device with ifconfig.
+<br>
+As an example, if you want to set up the IP address of your Ethernet card, you can pass the necessary options to the ifconfig command as follows:
+<br>
+# ifconfig p2p1 192.168.0.1 netmask 255.255.255.0 broadcast 192.168.0.255 up
+<br>
+Where the 192.168.0.1 number pertains to the IP address of your machine. 
+I have used a 
+Private IP address. 255.255.255.0 denotes the network mask which decides the potential size of your network,
+The number 192.168.0.255 denotes the broadcast address and lastly, 
+The up keyword is the flag which loads the module related to this particular Ethernet card and makes it ready to receive and send data.
+<br>
+Earlier, Ethernet interface was identified as eth0, eth1 and so on. 
+However, if you are using latest Fedora Linux, the Ethernet interface is identified as p2p1, p2p2 and so on.
+<br>
+GATHERING NETWORK RELATED DATA:
+<br>
+When used without any parameters, the command ifconfig shows details of the network interfaces that are up and running in your computer. In my machine which has a single Ethernet card and a loop back interface, I get the following output.
+<br>
+<br>
+lo        Link encap:Local Loopback
+          <br>inet addr:127.0.0.1  Mask:255.0.0.0
+          <br>inet6 addr: ::1/128 Scope:Host
+          <br>UP LOOPBACK RUNNING  MTU:16436  Metric:1
+          <br>RX packets:8 errors:0 dropped:0 overruns:0 frame:0
+          <br>TX packets:8 errors:0 dropped:0 overruns:0 carrier:0
+          <br>collisions:0 txqueuelen:0 
+          <br>RX bytes:480 (480.0 b)  TX bytes:480 (480.0 b)
+<br>
+p2p1      Link encap:Ethernet  HWaddr 00:1C:C0:AE:B5:E6  
+          <br>inet addr:192.168.0.1  Bcast:192.168.0.255  Mask:255.255.255.0
+          <br>inet6 addr: fe80::21c:c0ff:feae:b5e6/64 Scope:Link
+          <br>UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          <br>RX packets:41620 errors:0 dropped:0 overruns:0 frame:0
+          <br>TX packets:40231 errors:0 dropped:0 overruns:0 carrier:0
+          <br>collisions:0 txqueuelen:1000 
+          <br>RX bytes:21601203 (20.6 MiB)  TX bytes:6145876 (5.8 MiB)
+          <br>Interrupt:21 Base address:0xe000 
+<br>
+<br>
+Analysis of ifconfig output
+<br>
+Lets take a closer look at the output fields of the ifconfig command.
+<br>
+    <br>
+    Link encap:Ethernet - This denotes that the interface is an Ethernet related device.
+    <br>
+    HWaddr 00:70:40:42:8A:60 - This is the hardware address or MAC address which is unique to each Ethernet card which is manufactured. Usually, the first half part of this address will contain the manufacturer code which is common for all the Ethernet cards manufactured by the same manufacturer and the rest will denote the device Id which should not be the same for any two devices manufactured at the same place.
+    <br>
+    inet addr - indicates the machine IP address
+    <br>
+    Bcast - denotes the broadcast address
+    <br>
+    Mask - is the network mask which we passed using the netmask option (see above).
+    <br>
+    UP - This flag indicates that the kernel modules related to the Ethernet interface has been loaded.
+    <br>
+    BROADCAST - Denotes that the Ethernet device supports broadcasting - a necessary characteristic to obtain IP address via DHCP.
+    <br>
+    NOTRAILERS - indicate that trailer encapsulation is disabled. Linux usually ignore trailer encapsulation so this value has no effect at all.
+    <br>
+    RUNNING - The interface is ready to accept data.
+    <br>
+    MULTICAST - This indicates that the Ethernet interface supports multicasting. Multicasting can be best understood by relating to a radio station. Multiple devices can capture the same signal from the radio station but if and only if they tune to a particular frequency. Multicast allows a source to send a packet(s) to multiple machines as long as the machines are watching out for that packet.
+    <br>
+    MTU - short form for Maximum Transmission Unit is the size of each packet received by the Ethernet card. 
+    The value of MTU for all Ethernet devices by default is set to 1500. 
+    Though you can change the value by passing the necessary option to the ifconfig command. 
+    Setting this to a higher value could hazard packet fragmentation or buffer overflows. 
+    Do compare the MTU value of your Ethernet device and the loopback device and see if they are same or different. 
+    Usually, the loopback device will have a larger packet length.
+    <br>
+    Metric - This option can take a value of 0,1,2,3... with the lower the value the more leverage it has. The value of this property decides the priority of the device. This parameter has significance only while routing packets. For example, if you have two Ethernet cards and you want to forcibly make your machine use one card over the other in sending the data. Then you can set the Metric value of the Ethernet card which you favor lower than that of the other Ethernet card. I am told that in Linux, setting this value using ifconfig has no effect on the priority of the card being chosen as Linux uses the Metric value in its routing table to decide the priority.
+    <br>
+    RX Packets, TX Packets - The next two lines show the total number of packets received and transmitted respectively. As you can see in the output, the total errors are 0, no packets are dropped and there are no overruns. If you find the errors or dropped value greater than zero, then it could mean that the Ethernet device is failing or there is some congestion in your network.
+    <br>
+    collisions - The value of this field should ideally be 0. If it has a value greater than 0, it could mean that the packets are colliding while traversing your network - a sure sign of network congestion.
+    <br>
+    txqueuelen - This denotes the length of the transmit queue of the device. You usually set it to smaller values for slower devices with a high latency such as modem links and ISDN.
+    <br>
+    RX Bytes, TX Bytes - These indicate the total amount of data that has passed through the Ethernet interface either way. Taking the above example, I can fairly assume that I have used up 31.6 MB in downloading and 2.5 MB uploading which is a total of 37.1 MB of bandwidth. As long as there is some network traffic being generated via the Ethernet device, both the RX and TX bytes will go on increasing.
+    <br>
+    Interrupt - From the data, I come to know that my network interface card is using the interrupt number 9. This is usually set by the system.
+
+<br>
+The values of almost all the options listed above can be modified using the requisite ifconfig options.
+<br>
+For example, you can pass the option trailers to the ifconfig command to enable trailer encapsulation.
+<br>
+Or you can change the packet size by using the mtu option along with the new value and so on.
+<br>
+But in majority of the cases, you always accept the default values.
+<br>
+Learning to use the right command is only a minuscule part of the job of a network administrator. 
+<br>
+The major part of the job is in analysing the data returned by the command and arriving at the right conclusions.
+<br><br> 

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HTTP TOOL</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="assets/css/form-elements.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- Custom CSS -->
+    <link href="assets/css/sb-admin.css" rel="stylesheet">
+</head>
+
+<body>
+    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top"><h4><strong>Networking Tools</strong></h4></a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="descriptions/abt_http.html"><h4><strong>About http</strong></h4></a>
+                    </li>
+                    <li>
+                        <a href="../index.html"><h4><strong>Home</strong></h4></a>
+                    </li>
+                </ul>
+                <!-- /.navbar-collapse -->
+            </div>
+
+            <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav side-nav">
+                    <li>
+                        <a href="#" data-target="#demo">
+                            <h4><strong>Other Tools<i class="fa fa-fw fa-caret-down"></i></strong></h4></a>
+                        <ul id="demo">
+                            <li>
+                                <a href="latency.html"><h5>LATENCY</h5></a>
+                            </li>
+                            <li>
+                                <a href="trace.html"><h5>TRACE ROUTE</h5></a>
+                            </li>
+                            <li>
+                                <a href="ping.html"><h5>PING</h5></a>
+                            </li>
+                            <li>
+                                <a href="dns.html"><h5>DNS</h5></a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.container-fluid -->
+        </div>
+    </nav>
+
+    <!-- Top content -->
+    <div class="top-content">
+
+        <div class="inner-bg">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-10 col-sm-offset-2 text">
+
+                        <h1><strong>FULL PAGE LOAD TESTING</strong></h1>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-8 col-sm-offset-3 form-box">
+                        <div class="form-top">
+                            <h3>Full page load test to check the response time of your webpage</h3>
+                            <p>Enter a host name or IP address to perform the test</p>
+                        </div>
+                        <div class="form-bottom">
+                            <form role="form" action="http_action.php" method="post" class="http-form">
+                                <div class="form-group">
+                                    <label class="sr-only" for="ipaddr">IP Address</label>
+                                    <input type="text" name="ipaddr" placeholder="IP Address..." class="form-control" id="ipaddr">
+                                </div>
+                                <button type="submit" class="btn">Submit</button>
+                                <p>Example: "www.google.com" or "192.168.1.104"</p>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- Javascript -->
+    <script src="assets/js/jquery-1.11.1.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/jquery.backstretch.min.js"></script>
+    <script src="assets/js/scripts.js"></script>
+
+</body>
+
+</html>

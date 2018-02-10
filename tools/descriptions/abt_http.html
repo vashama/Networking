@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        body {
+            background-image: url("1.jpg");
+        }
+    </style>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HTTP DESCRIPTION</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
+    <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/font-awesome/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="../assets/css/form-elements.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+
+    <!-- Custom CSS -->
+    <link href="../assets/css/sb-admin.css" rel="stylesheet">
+</head>
+
+<body>
+    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top"><h4><strong>Networking Tools</strong></h4></a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="../http.html"><h4><strong>HTTP Tool</strong></h4></a>
+                    </li>
+                    <li>
+                        <a href="/main page/index.html"><h4><strong>Home</strong></h4></a>
+                    </li>
+                </ul>
+                <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container-fluid -->
+        </div>
+    </nav>
+
+    <!-- Top content -->
+    <div class="top-content">
+
+        <div class="inner-bg">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-8 col-sm-offset-2 text">
+
+                        <h1><strong>HTTP DESCRIPTION</strong></h1>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12 form-box">
+                        <div class="form-top">
+                            <br>
+                            <p1>
+                                The <b>Hypertext Transfer Protocol (HTTP)</b> is an application protocol for distributed,
+                                collaborative, hypermedia information systems. HTTP is the foundation of data communication
+                                for the World Wide Web. The standard port for HTTP connections is port 80.
+                                <br>
+                                <br>
+                                <b>Overview:</b>
+                                <br>
+                                <br> HTTP functions as a request–response protocol in the client–server computing model. A web
+                                browser, for example, may be the client and an application running on a computer hosting
+                                a web site may be the server. The client submits an HTTP request message to the server. The
+                                server, which provides resources such as HTML files and other content, or performs other
+                                functions on behalf of the client, returns a response message to the client. The response
+                                contains completion status information about the request and may also contain requested content
+                                in its message body.
+                                <br>
+                                <br> A web browser is an example of a user agent (UA). Other types of user agent include the
+                                indexing software used by search providers (web crawlers), voice browsers, mobile apps, and
+                                other software that accesses, consumes, or displays web content.
+                                <br>
+                                <br> HTTP is designed to permit intermediate network elements to improve or enable communications
+                                between clients and servers. High-traffic websites often benefit from web cache servers that
+                                deliver content on behalf of upstream servers to improve response time. Web browsers cache
+                                previously accessed web resources and reuse them when possible to reduce network traffic.
+                                HTTP proxy servers at private network boundaries can facilitate communication for clients
+                                without a globally routable address, by relaying messages with external servers.
+                                <br>
+                                <br> HTTP resources are identified and located on the network by uniform resource locators (URLs),
+                                using the uniform resource identifier (URI) schemes http and https. URIs and hyperlinks in
+                                Hypertext Markup Language (HTML) documents form inter-linked hypertext documents.
+                                <br>
+                                <br>
+                                <br>
+                                <center><b>HTTPS</b></center>
+                                <br>
+                                <br> Short for Hypertext Transfer Protocol Secure, HTTPS is a protocol which uses HTTP on a connection
+                                encrypted by transport-layer security. HTTPS is used to protect transmitted data from eavesdropping.
+                                It is the default protocol for conducting financial transactions on the web, and can protect
+                                a website's users from censorship by a government or an ISP. HTTPS uses port 443 to transfer
+                                its information.
+                                <br>
+                                <br>
+                                <b>Request Methods</b>
+                                <br>
+                                <br> HTTP defines methods (sometimes referred to as verbs) to indicate the desired action to
+                                be performed on the identified resource. What this resource represents, whether pre-existing
+                                data or data that is generated dynamically, depends on the implementation of the server.
+                                Often, the resource corresponds to a file or the output of an executable residing on the
+                                server. Given below are the request methods of http.
+                                <br>
+                                <br>
+                                <b>GET</b>
+                                <br>The GET method requests a representation of the specified resource. Requests using GET should
+                                only retrieve data and should have no other effect. (This is also true of some other HTTP
+                                methods.) The W3C has published guidance principles on this distinction, saying, "Web application
+                                design should be informed by the above principles, but also by the relevant limitations.
+                                See safe methods below.
+                                <br>
+                                <br>
+                                <b>HEAD</b>
+                                <br>The HEAD method asks for a response identical to that of a GET request, but without the response
+                                body. This is useful for retrieving meta-information written in response headers, without
+                                having to transport the entire content.
+                                <br>
+                                <br>
+                                <b>POST</b>
+                                <br>The POST method requests that the server accept the entity enclosed in the request as a new
+                                subordinate of the web resource identified by the URI. The data POSTed might be, for example,
+                                an annotation for existing resources; a message for a bulletin board, newsgroup, mailing
+                                list, or comment thread; a block of data that is the result of submitting a web form to a
+                                data-handling process; or an item to add to a database.
+                                <br>
+                                <br>
+                                <b>PUT</b>
+                                <br>The PUT method requests that the enclosed entity be stored under the supplied URI. If the
+                                URI refers to an already existing resource, it is modified; if the URI does not point to
+                                an existing resource, then the server can create the resource with that URI.
+                                <br>
+                                <br>
+                                <b>DELETE</b>
+                                <br>The DELETE method deletes the specified resource.
+                                <br>
+                                <br>
+                                <b>TRACE</b>
+                                <br>The TRACE method echoes the received request so that a client can see what (if any) changes
+                                or additions have been made by intermediate servers.
+                                <br>
+                                <br>
+                                <b>OPTIONS</b>
+                                <br>The OPTIONS method returns the HTTP methods that the server supports for the specified URL.
+                                This can be used to check the functionality of a web server by requesting instead of a specific
+                                resource.
+                                <br>
+                                <br>
+                                <b>CONNECT</b>
+                                <br>The CONNECT method converts the request connection to a transparent TCP/IP tunnel, usually
+                                to facilitate SSL-encrypted communication (HTTPS) through an unencrypted HTTP proxy. See
+                                HTTP CONNECT tunneling.
+                                <br>
+                                <br>
+                                <b>PATCH</b>
+                                <br>The PATCH method applies partial modifications to a resource.
+                                <br>
+                                <br>All general-purpose HTTP servers are required to implement at least the GET and HEAD methods
+                                and, whenever possible, also the OPTIONS method.
+                                <br>
+                                <br>
+                                <br>
+                                <b>HTTP Status Codes:</b>
+                                <br>
+                                <br>When a browser requests a service from a web server, an error might occur. The first line
+                                of the HTTP response is called the status line and includes a numeric status code (such as
+                                "404") and a textual reason phrase (such as "Not Found"). The way the user agent handles
+                                the response primarily depends on the code and secondarily on the other response header fields.
+                                Custom status codes can be used since, if the user agent encounters a code it does not recognize,
+                                it can use the first digit of the code to determine the general class of the response. The
+                                standard also allows the user agent to attempt to interpret the reason phrase, though this
+                                might be unwise since the standard explicitly specifies that status codes are machine-readable
+                                and reason phrases are human-readable. HTTP status code is primarily divided into five groups
+                                for better explanation of request and responses between client and server as named: Informational
+                                1XX, Successful 2XX, Redirection 3XX, Client Error 4XX and Server Error 5XX.
+                                <br>
+                                <br> Some of the commonly used error codes are
+                                <br>
+                                <br> 1×× Informational
+                                <ul>
+                                    <li>100 Continue</li>
+                                    <li>101 Switching Protocols</li>
+                                    <li>102 Processing</li>
+                                </ul>
+                                <br>
+                                <br> 2×× Success
+                                <ul>
+                                    <li> 200 OK
+                                        <li> 201 Created
+                                            <li> 202 Accepted
+                                                <li> 203 Non-authoritative Information
+                                                    <li> 204 No Content
+                                                        <li> 205 Reset Content
+                                                            <li> 206 Partial Content
+                                                                <li> 207 Multi-Status
+                                                                    <li> 208 Already Reported
+                                                                        <li> 226 IM Used
+                                </ul>
+                                <br>
+                                <br> 3×× Redirection
+                                <ul>
+                                    <li> 300 Multiple Choices
+                                        <li> 301 Moved Permanently
+                                            <li> 302 Found
+                                                <li> 303 See Other
+                                                    <li> 304 Not Modified
+                                                        <li> 305 Use Proxy
+                                                            <li> 307 Temporary Redirect
+                                                                <li> 308 Permanent Redirect
+                                </ul>
+                                <br>
+                                <br> 4×× Client Error
+                                <ul>
+                                    <li> 400 Bad Request
+                                        <li> 401 Unauthorized
+                                            <li> 402 Payment Required
+                                                <li> 403 Forbidden
+                                                    <li> 404 Not Found
+                                                        <li> 405 Method Not Allowed
+                                                            <li> 406 Not Acceptable
+                                                                <li> 407 Proxy Authentication Required
+                                                                    <li> 408 Request Timeout
+                                                                        <li> 409 Conflict
+                                                                            <li> 410 Gone
+                                                                                <li> 411 Length Required
+                                                                                    <li> 412 Precondition Failed
+                                                                                        <li> 413 Payload Too Large
+                                                                                            <li> 414 Request-URI Too Long
+                                                                                                <li> 415 Unsupported Media Type
+                                                                                                    <li> 416 Requested Range Not
+                                                                                                        Satisfiable
+                                                                                                        <li> 417 Expectation Failed
+                                                                                                            <li> 418 I'm a teapot
+                                                                                                                <li> 421 Misdirected
+                                                                                                                    Request
+                                                                                                                    <li> 422 Unprocessable
+                                                                                                                        Entity
+                                                                                                                        <li> 423
+                                                                                                                            Locked
+                                                                                                                            <li> 424
+                                                                                                                                Failed
+                                                                                                                                Dependency
+                                                                                                                                <li> 426
+                                                                                                                                    Upgrade
+                                                                                                                                    Required
+                                                                                                                                    <li> 428
+                                                                                                                                        Precondition
+                                                                                                                                        Required
+                                                                                                                                        <li> 429
+                                                                                                                                            Too
+                                                                                                                                            Many
+                                                                                                                                            Requests
+                                                                                                                                            <li> 431
+                                                                                                                                                Request
+                                                                                                                                                Header
+                                                                                                                                                Fields
+                                                                                                                                                Too
+                                                                                                                                                Large
+                                                                                                                                                <li> 451
+                                                                                                                                                    Unavailable
+                                                                                                                                                    For
+                                                                                                                                                    Legal
+                                                                                                                                                    Reasons
+                                                                                                                                                    <li> 499
+                                                                                                                                                        Client
+                                                                                                                                                        Closed
+                                                                                                                                                        Request
+                                </ul>
+                                <br>
+                                <br> 5×× Server Error
+                                <ul>
+                                    <li> 500 Internal Server Error
+                                        <li> 501 Not Implemented
+                                            <li> 502 Bad Gateway
+                                                <li> 503 Service Unavailable
+                                                    <li> 504 Gateway Timeout
+                                                        <li> 505 HTTP Version Not Supported
+                                                            <li> 506 Variant Also Negotiates
+                                                                <li> 507 Insufficient Storage
+                                                                    <li> 508 Loop Detected
+                                                                        <li> 510 Not Extended
+                                                                            <li> 511 Network Authentication Required
+                                                                                <li> 599 Network Connect Timeout Error
+                                </ul>
+
+                            </p1>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- Javascript -->
+    <script src="../assets/js/jquery-1.11.1.min.js"></script>
+    <script src="../assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../assets/js/jquery.backstretch.min.js"></script>
+    <script src="../assets/js/scripts.js"></script>
+
+</body>
+
+</html>

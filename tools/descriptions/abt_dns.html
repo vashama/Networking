@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        body {
+            background-image: url("1.jpg");
+        }
+    </style>
+    <meta charset="utf-8">
+    <meta DNS-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>DNS DESCRIPTION</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="DNS://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
+    <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/font-awesome/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="../assets/css/form-elements.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+
+    <!-- Custom CSS -->
+    <link href="../assets/css/sb-admin.css" rel="stylesheet">
+</head>
+
+<body>
+    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top"><h4><strong>Networking Tools</strong></h4></a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="../dns.html"><h4><strong>DNS Tool</strong></h4></a>
+                    </li>
+                    <li>
+                        <a href="/main page/index.html"><h4><strong>Home</strong></h4></a>
+                    </li>
+                </ul>
+                <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container-fluid -->
+        </div>
+    </nav>
+
+    <!-- Top content -->
+    <div class="top-content">
+
+        <div class="inner-bg">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-8 col-sm-offset-2 text">
+
+                        <h1><strong>DNS DESCRIPTION</strong></h1>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12 form-box">
+                        <div class="form-top">
+                            <br>
+                            <p1>
+                                The Domain Name System (DNS) is a hierarchical decentralized naming system for computers, services, or any resource connected
+                                to the Internet or a private network.Most prominently, it translates more readily memorized
+                                domain names to the numerical IP addresses needed for the purpose of locating and identifying
+                                computer services and devices with the underlying network protocols. By providing a worldwide,
+                                distributed directory service, the Domain Name System is an essential component of the functionality
+                                of the Internet. In other words, it is an Internet service that translates domain names into
+                                IP addresses, because domain names are used as they are alphabetic and are easier to remember.
+                                The Internet however, is really based on IP addresses. Every time you use a domain name,
+                                therefore, a DNS service must translate the name into the corresponding IP address. An often-used
+                                analogy to explain the Domain Name System is that it serves as the phone book for the Internet
+                                by translating human-friendly computer hostnames into IP addresses. For example, the domain
+                                name www.example.com might translate to 198.105.232.4.
+
+                                <br>The DNS system is, in fact, its own network. If one DNS server doesn't know how to translate
+                                a particular domain name, it asks another one, and so on, until the correct IP address is
+                                returned.The Domain Name System delegates the responsibility of assigning domain names and
+                                mapping those names to Internet resources by designating authoritative name servers for each
+                                domain. Network administrators may delegate authority over sub-domains of their allocated
+                                name space to other name servers. This mechanism provides distributed and fault tolerant
+                                service and was designed to avoid a single large central database.
+
+                                <br>The Internet maintains two principal namespaces, the domain name hierarchy[1] and the Internet
+                                Protocol (IP) address spaces.[2] The Domain Name System maintains the domain name hierarchy
+                                and provides translation services between it and the address spaces. Internet name servers
+                                and a communication protocol implement the Domain Name System.[3] A DNS name server is a
+                                server that stores the DNS records for a domain; a DNS name server responds with answers
+                                to queries against its database.
+
+                                <br>The most common types of records stored in the DNS database are for DNS zone authority (SOA),
+                                IP addresses (A and AAAA), SMTP mail exchangers (MX), name servers (NS), pointers for reverse
+                                DNS lookups (PTR), and domain name aliases (CNAME). Although not intended to be a general
+                                purpose database, DNS can store records for other types of data for either automatic lookups,
+                                such as DNSSEC records, or for human queries such as responsible person (RP) records. As
+                                a general purpose database, the DNS has also been used in combating unsolicited email (spam)
+                                by storing a real-time blackhole list. The DNS database is traditionally stored in a structured
+                                zone file.
+                                <br>
+                                <br><b>DNS and Internet Domains</b>
+                                <br>
+                                <br>The Internet Domain Name System is managed by a Name Registration Authority on the Internet,
+                                responsible for maintaining top-level domains that are assigned by organization and by country/region.
+                                These domain names follow the International Standard 3166. Some of the many existing abbreviations,
+                                reserved for use by organizations, as well as two-letter and three-letter abbreviations used
+                                for countries/regions. Some DNS Top-level Domain Names (TLDs) are given below:
+                                <br>
+                                <br>com -Commercial organizations
+                                <br>edu -Educational institutions
+                                <br>org -Non-profit organizations
+                                <br>net -Networks (the backbone of the Internet)
+                                <br>gov -Non-military government organizations
+                                <br>mil -Military government organizations
+                                <br>xx-Two-letter country code (i.e. us, au, ca, fr)
+                                <br>
+                                <br>
+                                <br>DNS is made up of many different elements which control different aspects of your domain
+                                name.
+                                <br>
+                                <br><b>Nameserver:</b> Nameservers "point" your domain name to the company that controls its
+                                DNS settings. Usually, this will be the company where you registered the domain name. However,
+                                if your website is hosted by another company, sometimes you'll need to use their nameservers.
+                                <br>
+                                <br><b>Zone File:</b> Zone Files are simply the files that store all of your domain's DNS settings.
+                                Your domain name's Zone File is stored on the company's nameserver.
+                                <br>
+                                <br><b>A Record:</b> A Records point your domain name to an individual server using an IP address.
+                                An example IP address is 123.4.67.5. You can also use A Records to point subdomains (for
+                                example subdomain.coolexample.com) to a server's IP address. Every domain name has a primary
+                                A Record called "@," which controls what your domain name does when some visits it directly.
+                                <br>
+                                <br><b>CNAME:</b> CNAMEs point your subdomains to another server using a server name. Unlike
+                                A Records, CNAMEs cannot use IP addresses. Most domain names have many CNAMEs.
+                                <br>
+                                <br><b>MX Records:</b> MX Records point your domain name's email to its email provider.
+                                <br>
+                                <br>
+                                <br><b>Address resolution mechanism</b>
+                                <br>
+                                <br> In theory a full host name may have several name segments, (e.g ahost.ofasubnet.ofabiggernet.inadomain.example).
+                                In practice, full host names will frequently consist of just three segments (ahost.inadomain.example,
+                                and most often www.inadomain.example). For querying purposes, software interprets the name
+                                segment by segment, from right to left, using an iterative search procedure. At each step
+                                along the way, the program queries a corresponding DNS server to provide a pointer to the
+                                next server which it should consult.
+
+                                <br>A DNS recursor consults three nameservers to resolve the address www.wikipedia.org.
+
+                                <br>As originally envisaged, the process was as simple as:
+
+                                <br> 1. The local system is pre-configured with the known addresses of the root servers in a
+                                file of root hints, which need to be updated periodically by the local administrator from
+                                a reliable source to be kept up to date with the changes which occur over time.
+                                <br>
+                                <br> 2. Query one of the root servers to find the server authoritative for the next level down
+                                (so in the case of our simple hostname, a root server would be asked for the address of a
+                                server with detailed knowledge of the example top level domain).
+                                <br>
+                                <br> 3. Querying this second server for the address of a DNS server with detailed knowledge of
+                                the second-level domain (inadomain.example in our example).
+                                <br>
+                                <br> 4. Repeating the previous step to progress down the name, until the final step which would,
+                                rather than generating the address of the next DNS server, return the final address sought.
+                                <br>The mechanism in this simple form has a difficulty: it places a huge operating burden on
+                                the root servers, with every search for an address starting by querying one of them. Being
+                                as critical as they are to the overall function of the system, such heavy use would create
+                                an insurmountable bottleneck for trillions of queries placed every day. In practice caching
+                                is used to overcome this problem, and in actual fact root nameservers deal with very little
+                                of the total traffic.
+                                <br>
+                                <br>
+                                <br><b>Domain Name Registration Process</b>
+                                <br>
+                                <br>In order to reserve a domain, a registrant must register it with one of almost a thousand
+                                ICANN-accredited registrars. The Internet Corporation for Assigned Names and Numbers (ICANN)
+                                is the international non-profit corporation that oversees the assignment of both IP addresses
+                                and domain names. It has responsibility for managing root server and TLD name system management
+                                and has contractual agreements with both registries and registrars.
+
+                                <br><b>A registrant</b> is the person or organization who has registered the domain name. In
+                                order to do so, the registrant will usually apply online to a domain registrar or one of
+                                their resellers. The registrant is bound by the terms and conditions of the registrar with
+                                which it registers its domain name, for instance adhering to a certain code of conduct or
+                                indemnifying the registrar and registry against any legal or civil action taken as a result
+                                of use of the domain name. Registrants have certain responsibilities that are incorporated
+                                into these terms and conditions like payment of registration fees and submission and timely
+                                update of accurate data.
+
+                                <br>In addition to registering the name, registrants also need to have their domains listed on
+                                name servers in order to have that domain reachable on the Internet. A registrant is responsible
+                                for procuring or hosting his or her own name server if the registrar does not offer this
+                                service or he or she has opted out of the registrars service.
+
+                                <br><b>Registrars</b> are organizations accredited by ICANN and certified by the registry operators
+                                to sell domains. They are bound by the Registrar Accreditation Agreement (RAA) with ICANN
+                                - and by their agreements with the registry operators. The RAA sets out responsibilities
+                                for the registrar including maintenance of WHOIS data, submission of data to domain registries,
+                                facilitating public WHOIS queries, ensuring registrants details are escrowed, and complying
+                                with RAA conditions relating to the conclusion of the registration period.
+
+                                <br>Some registrants may opt to register through a <b>reseller</b>. These are affiliated or under
+                                contract with registrars, and usually offer other services such as web hosting, email mailboxes
+                                etc. Resellers are bound by their agreements with the registrar(s) whose services they sell;
+                                they are not accredited by ICANN. However, the registrar for whom they are re-selling will
+                                still be the sponsor for the domain name registration and accountable for the domains sold
+                                by the reseller.
+
+                                <br>While registrars are contracted to conduct the day-to-day business of selling domain name
+                                registrations, <b>registry operators</b> are responsible for maintaining the registry for
+                                each TLD. The responsibilities of the registry operator include accepting registration requests
+                                (whether from registrars or directly from registrants), maintaining a database of the necessary
+                                registration data and providing name servers to publish the zone file data (i.e. information
+                                about the location of a domain) throughout the Internet.
+                            </p1>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- Javascript -->
+    <script src="../assets/js/jquery-1.11.1.min.js"></script>
+    <script src="../assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../assets/js/jquery.backstretch.min.js"></script>
+    <script src="../assets/js/scripts.js"></script>
+
+</body>
+
+</html>

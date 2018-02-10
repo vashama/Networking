@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<style>
+        body {
+ background-image: url("1.jpg");
+    }
+    </style>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TRACE ROUTE DESCRIPTION</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
+    <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/font-awesome/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="../assets/css/form-elements.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+
+    <!-- Custom CSS -->
+    <link href="../assets/css/sb-admin.css" rel="stylesheet">
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+</head>
+
+<body>
+    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top"><h4><strong>Networking Tools</strong></h4></a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="../trace.html"><h4><strong>Traceroute Tool</strong></h4></a>
+                    </li>
+                    <li>
+                        <a href="/main page/index.html"><h4><strong>Home</strong></h4></a>
+                    </li>
+                </ul>
+                <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container-fluid -->
+        </div>
+    </nav>
+
+    <!-- Top content -->
+    <div class="top-content">
+
+        <div class="inner-bg">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-8 col-sm-offset-2 text">
+
+                        <h1><strong>TRACE ROUTE DESCRIPTION</strong></h1>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12 form-box">
+                        <div class="form-top">
+                            <br>
+                            <p1>
+                                TRACEROUTE:
+                                <br> The Traceroute utility is a system administrator's tool that shows you the route over the
+                                network between two systems, listing all the intermediate routers a connection must pass
+                                through to get to its destination. It can be used by network administrators to detect bogus
+                                routes or potential redirects of traffic. Attackers can use traceroute to enumerate a path
+                                and for firewall discovery. It can help to determine why connections to a given server might
+                                be poor, and can often help you figure out where exactly the problem is. It also shows how
+                                systems are connected to each other, letting you see how your ISP connects to the Internet
+                                as well as how the target system is connected. traceroute attempts to trace the route an
+                                IP packet would follow to some internet host by launching probe packets with a small ttl
+                                (time to live) then listening for an ICMP "time exceeded" reply from a gateway. It start
+                                its probes with a ttl of one and increases this by one until it gets an ICMP "port unreachable"
+                                (or TCP reset), which means we got to the "host", or hit a max (which defaults to 30 hops).
+                                Three probes (by default) are sent at each ttl setting and a line is printed showing the
+                                ttl, address of the gateway and round trip time of each probe. The address can be followed
+                                by additional information when requested. If the probe answers come from different gateways,
+                                the address of each responding system will be printed. If there is no response within a 5.0
+                                seconds (default), an "*" (asterisk) is printed for that probe. As an example, let's say
+                                there are normally seven hops from your office in Bangalore to the Delhi office; however,
+                                one day, users start complaining of extremely slow traffic. So, when you perform a traceroute,
+                                you determine that the hop count is now 14 and your packets are going to New York via China,
+                                which may indicate some type of issue. Your packets are taking a different route than usual;
+                                this may be a legitimate problem, or an attacker may have manipulated the Border Gateway
+                                Protocol routing standard and is potentially redirecting your traffic. Let's look at an example
+                                of a simple Windows traceroute, starting with the third hop that is targeting www.example.com.
+                                <br>
+                                <br> Different types of Traceroute program
+                                <br>
+                                <br> There are different types of traceroute programs. Each of them works slightly differently.
+                                But the overall concept behind each of them is the same. All of them use the TTL value. Why
+                                different implementations? That because you can use the one which is applicable to your environment.
+                                If suppose a firewall block the UDP traffic then you can use another traceroute for this
+                                purpose. The different types are mentioned below.
+                                <br> UDP Traceroute
+                                <br> ICMP traceroute
+                                <br> TCP Traceroute
+                                <br>
+                                <br>
+                                <br> If you are having trouble connecting to a website, traceroute can tell you where the problem
+                                is. It can also help visualize the path traffic takes between your computer and a web server.
+                                <br> How to Use Traceroute Traceroute is run from a command prompt or terminal window.
+                                <br> To run a traceroute, run the traceroute command followed by the address of a website.
+                                <br> For example, if you wanted to run a traceroute on GOOGLE, you'd run the command:
+                                <br>
+                                <br> $ traceroute www.google.com
+                                <br> traceroute to google.com (216.58.220.46), 30 hops max, 60 byte packets
+                                <br> 1 192.168.1.1 (192.168.1.1) 0.931 ms 1.609 ms 1.687 ms
+                                <br> 2 172.16.18.1 (172.16.18.1) 3.657 ms 3.879 ms 3.876 ms
+                                <br> 3 124.40.247.249 (124.40.247.249) 6.559 ms * *
+                                <br> 4 124.40.246.34 (124.40.246.34) 13.232 ms 13.309 ms 14.744 ms
+                                <br> 5 72.14.233.204 (72.14.233.204) 13.383 ms 14.650 ms 14.740 ms
+                                <br> 6 209.85.255.43 (209.85.255.43) 15.411 ms 11.364 ms 10.735 ms
+                                <br> 7 maa03s18-in-f46.1e100.net (216.58.220.46) 10.234 ms 10.265 ms 10.679 ms
+                                <br>
+                                <br>
+                                <br> Understanding the Output
+                                <br> The basic idea is self-explanatory.
+                                <br> The first line represents your home router (assuming you are behind a router), the next
+                                lines represent your ISP, and each line further down represents a router that's further away.
+                                <br>
+                                <br> The format of each line is as follows:
+                                <br> Hop Domain Name [IP Address] RTT1 RTT2 RTT3
+                                <br> Hop:
+
+                                <br> Whenever a packet is passed between a router, this is referred to as a "hop"
+                                <br> For example, in the output above, we can see that it takes 7 hops to reach Google's servers
+                                from my current location.
+                                <br>
+                                <br> RTT1, RTT2, RTT3:
+                                <br> This is the round-trip time that it takes for a packet to get to a hop and back to your
+                                computer (in milliseconds). This is often referred to as latency, and is the same number
+                                you see when using ping. Traceroute sends three packets to each hop and displays each time,
+                                so you have some idea of how consistent (or inconsistent) the latency is. If you see a *
+                                in some columns, you didn't receive a response - which could indicate packet loss.
+                                <br>
+                                <br> Domain Name [IP Address]:
+                                <br> The domain name, if available, can often help you see the location of a router. If this
+                                isn't available, only the IP address of the router is displayed.
+                                <br>
+                                <br> OPTIONS
+
+
+                                <br>
+                                <br> --help Display a help message, and exit.
+                                <br>
+                                <br> -4, -6 Explicitly force IPv4 or IPv6 tracerouting. By default, the program will try to resolve
+                                the name given, and choose the appropriate protocol automatically. If resolving a host name
+                                returns both IPv4 and IPv6 addresses, traceroute will use IPv4.
+                                <br>
+                                <br> -I Use ICMP ECHO for probes.
+                                <br>
+                                <br> -T Use TCP SYN for probes.
+                                <br>
+                                <br> -d Enable socket level debugging (if the kernel supports it).
+                                <br>
+                                <br> -F Do not fragment probe packets.
+                                <br> For IPv4 it also sets DF bit, which tells intermediate routers not to fragment remotely
+                                as well. Varying the size of the probing packet by the packet_len command-line parameter,
+                                you can manually obtain information about the MTU of individual network hops.
+                                <br> The --mtuoption (see below) tries to do this automatically. Note, that non-fragmented features
+                                (like -F or --mtu) work properly since the Linux kernel 2.6.22 only. Before that version,
+                                IPv6 was always fragmented, IPv4 could use the once the discovered final mtu only (from the
+                                route cache), which can be less than the actual mtu of a device.
+                                <br>
+                                <br> -f first_ttl
+                                <br> Specifies with what TTL to start. Defaults to 1.
+                                <br>
+                                <br> -g gateway
+                                <br> Tells traceroute to add an IP source routing option to the outgoing packet that tells the
+                                network to route the packet through the specified gateway (most routers have disabled source
+                                routing for security reasons). In general, specifying multiple gateways is allowed (as a
+                                comma-separated list). For IPv6, the form of num,addr,addr... is allowed, wherenum is a route
+                                header type (default is type 2). (Note: the type 0 route header is now deprecated, according
+                                to rfc5095).
+                                <br>
+                                <br> -i interface
+                                <br> Specifies the interface through which traceroute should send packets. By default, the interface
+                                is selected according to the routing table.
+                                <br>
+                                <br> -m max_ttl
+                                <br> Specifies the maximum number of hops (max time-to-live value) traceroute will probe. The
+                                default is 30.
+                                <br>
+                                <br> -N squeries
+                                <br> Specifies the number of probe packets sent out simultaneously. Sending several probes concurrently
+                                can speed up traceroute considerably. The default value is 16. Note that some routers and
+                                hosts can use ICMP rate throttling. In such a situation specifying too large number can lead
+                                to loss of some responses.
+                                <br>
+                                <br> -n Do not try to map IP addresses to host names when displaying them.
+                                <br>
+                                <br> -p port
+                                <br> For UDP tracing, specifies the destination port base traceroute will use (the destination
+                                port number will be incremented by each probe). For ICMP tracing, specifies the initial ICMP
+                                sequence value (incremented by each probe too). For TCP and others specifies just the (constant)
+                                destination port to connect. When using the tcptraceroute wrapper, -pspecifies the source
+                                port.
+                                <br>
+                                <br> -t tos
+                                <br> For IPv4, set the Type of Service (TOS) and Precedence value. Useful values are 16 (low
+                                delay) and 8 (high throughput). Note that in order to use some TOS precedence values, you
+                                have to be superuser. For IPv6, set the Traffic Control value.
+                                <br>
+                                <br> -l flow_label
+                                <br> Use specified flow_label for IPv6 packets.
+                                <br>
+                                <br> -w waittime
+                                <br> Set the time (in seconds) to wait for a response to a probe (default is 5.0).
+                                <br>
+                                <br> -q nqueries
+                                <br> Sets the number of probe packets per hop. The default is 3.
+                                <br>
+                                <br> -r
+                                <br> Bypass the normal routing tables and send directly to a host on an attached network. If
+                                the host is not on a directly-attached network, an error is returned. This option can be
+                                used to ping a local host through an interface that has no route through it.
+                                <br>
+                                <br> -s source_addr
+                                <br> Chooses an alternative source address. Note that you must select the address of one of the
+                                interfaces. By default, the address of the outgoing interface is used.
+                                <br>
+                                <br> -z sendwait
+                                <br> Minimal time interval between probes (default 0). If the value is more than 10, then it
+                                specifies a number in milliseconds, else it is a number of seconds (floating point values
+                                allowed too). Useful when some routers use rate-limit for ICMP messages.
+                                <br>
+                                <br> -e Show ICMP extensions
+                                <br> The general form is CLASS/TYPE: followed by a hexadecimaldump. The MPLS (Multiprotocol Label
+                                Switching) data is shown parsed, in a form:MPLS:L=label,E=exp_use,S=stack_bottom,T=TTL (with
+                                any further objects separated by a slash ("/")).
+                                <br>
+                                <br> -A Perform AS path lookups in routing registries and print results directly after the corresponding
+                                addresses.
+                                <br>
+                                <br> -V Print version information, and exit.
+                                <br>
+                                <br>
+                                <br>
+                                <br> The following options are intended for an advanced usage (another trace methods etc.):
+                                <br>
+                                <br> --sport=port
+                                <br> Chooses the source port to use. Implies -N 1. Normally source ports (if applicable) are
+                                chosen by the0 system.
+                                <br>
+                                <br> --fwmark=mark
+
+                                <br> Set the firewall mark for outgoing packets (since Linux kernel 2.6.25).
+                                <br>
+                                <br> -M method
+                                <br> Use specified method for traceroute operations. Default traditional udp method is called
+                                default, and icmp (-I) and tcp (-T) have the names icmp and tcp, respectively. Method-specific
+                                options can be passed by -O. Most methods have their simple shortcuts (-I means -M icmp,
+                                etc).
+                                <br>
+                                <br> -O option
+                                <br> Specifies some method-specific option. Several options are separated by comma (or use several
+                                -O specifications on the command-line). Each method may have its own specific options, or
+                                many not have them at all. To print information about available options, use -O help.
+                                <br>
+                                <br> -U
+
+                                <br> Use UDP to particular destination port for tracerouting (instead of increasing the port
+                                per each probe). Default port is 53 (dns).
+                                <br>
+                                <br> -UL Use UDPLITE for tracerouting (default port is 53).
+                                <br>
+                                <br> -D Use DCCP Requests for probes.
+                                <br>
+                                <br> -P protocol
+                                <br> Use raw packet of specified protocol for tracerouting. Default protocol is 253, as per rfc3692.
+                                <br>
+                                <br> --mtu Discover MTU along the path being traced
+                                <br> Implies -F -N 1. New mtu is printed once in a form of F=NUM at the first probe of a hop
+                                which requires such mtu to be reached. (Actually, the correspond "frag needed" icmp message
+                                normally is sent by the previous hop).
+                                <br> Note, that some routers might cache once the seen information on a fragmentation. Thus you
+                                can receive the final mtu from a closer hop. Try to specify an unusual tos by -t, this can
+                                help for one attempt (then it can be cached there as well). See -Foption for more info.
+                                <br>
+                                <br> --back
+
+                                <br> Print the number of backward hops when it seems different with the forward direction. This
+                                number is guessed in assumption that remote hops send reply packets with initial ttl set
+                                to either 64, 128 or 255 (which is a common practice). It is printed as a negative value
+                                in a form of '-NUM' .
+                                <br>
+                                <br> Traceroute output first displays the IP address of the destination and the maximum number
+                                of hops it will traverse before it will quit the trace. Next, it displays the name, IP address
+                                and response time taken at each hop.
+                                <br>
+                                <br> 1 is the internet gateway of the network the trace is started from
+                                <br> 2 is normally the Internet service provider's (ISP) gateway
+                                <br> 3 is usually the backbone ISP's hop name and IP address
+                                <br> This trace continues to the destination domain, listing all the hops along the way.
+                                <br>
+                            </p1>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- Javascript -->
+    <script src="../assets/js/jquery-1.11.1.min.js"></script>
+    <script src="../assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../assets/js/jquery.backstretch.min.js"></script>
+    <script src="../assets/js/scripts.js"></script>
+
+    <!--[if lt IE 10]>
+            <script src="../assets/js/placeholder.js"></script>
+        <![endif]-->
+
+</body>
+
+</html>
